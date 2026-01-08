@@ -54,11 +54,11 @@ export default function ContactPage() {
                             Contact
                         </span>
                         <h1 className="text-4xl font-extralight text-navy-900 mb-6">
-                            Start with a question.
+                            Dialogue.
                         </h1>
                         <p className="text-slate-600 font-light text-sm">
-                            制作のご依頼、AI活用に関するご相談など、<br />
-                            お気軽にお問い合わせください。
+                            まだ言葉になっていない構想や、<br />
+                            形のない問いについて。
                         </p>
                     </div>
                 </FadeIn>

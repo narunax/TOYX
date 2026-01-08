@@ -14,15 +14,15 @@ export default function ContactCTA() {
             <div className="relative mx-auto max-w-4xl text-center">
                 <FadeIn>
                     <h2 className="text-4xl md:text-6xl font-extralight text-navy-900 mb-8 leading-tight">
-                        問いから、始めませんか？<br />
-                        <span className="text-2xl md:text-3xl text-slate-400 block mt-4 font-extralight">Start with a question.</span>
+                        問いが、明日を創る。<br />
+                        <span className="text-2xl md:text-3xl text-slate-400 block mt-4 font-extralight">Question creates the future.</span>
                     </h2>
                 </FadeIn>
 
                 <FadeIn delay={0.2}>
                     <p className="text-lg md:text-xl font-light text-slate-600 mb-16 max-w-2xl mx-auto leading-relaxed">
-                        あなたの課題、想い、構想を、まずは対話から探求しましょう。<br />
-                        答えを急がず、本質を共に見つけ出す旅の始まりです。
+                        解のない時代に、共に立ち向かう。<br />
+                        プロセスの中にこそ、本質的な価値が宿る。
                     </p>
                 </FadeIn>
 

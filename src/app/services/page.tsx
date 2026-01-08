@@ -21,7 +21,8 @@ export default function ServicesPage() {
                     <div className="text-center mb-20">
                         <h1 className="text-4xl md:text-6xl font-extralight text-navy-900 mb-6">Services</h1>
                         <p className="text-slate-600 font-light max-w-2xl mx-auto">
-                            課題の本質を見極め、映像とAI技術を駆使して最適なソリューションを提案します。
+                            伴走し、共に問いを立てる。<br />
+                            答えを出すことではなく、そのプロセスから意味と意義を見出していく。
                         </p>
                     </div>
                 </FadeIn>
