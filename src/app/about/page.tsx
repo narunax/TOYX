@@ -21,12 +21,12 @@ export default function AboutPage() {
                         <div className="prose prose-lg prose-slate font-light leading-relaxed">
                             <p>
                                 世界は、すでに答えで溢れている。<br />
-                                誰もが正解を知り、最短距離を走ろうとする。<br />
-                                けれど、本当に見たい景色は、その道の途中にあるとは限らない。
+                                誰もが容易に正解を手にし、最短距離を走ろうとする。<br />
+                                けれど、本当に見たい景色は、道草や遠回りのなかにこそ、潜んでいる。
                             </p>
                             <p>
                                 TOYXは、映像とAIという二つの眼差しで、<br />
-                                対象の内側に潜む、静かな熱を捉える。
+                                対象の内側に潜む、微細な光を捉える。
                             </p>
                             <p>
                                 それは、何のために存在するのか。<br />
@@ -34,7 +34,7 @@ export default function AboutPage() {
                             </p>
                             <p>
                                 問い続けること。<br />
-                                それだけが、唯一無二の輪郭を浮かび上がらせる。
+                                そこから、本当の輝きが見えてくる。
                             </p>
                         </div>
                     </FadeIn>
@@ -65,13 +65,13 @@ export default function AboutPage() {
                                     稲葉 成人
                                 </h2>
                                 <span className="text-sm font-light text-slate-400 block mb-8">
-                                    Naruhito Inaba / Video Creator & AI Strategist
+                                    Naruhito Inaba / Visual Designer & AI Strategist
                                 </span>
 
                                 <div className="space-y-6 text-slate-600 font-light leading-relaxed">
                                     <p>
                                         映像制作歴20年。TVCM、MV、企業VPなど多岐にわたる制作に携わる。<br />
-                                        「美しい映像」を作るのは当たり前。そこに「思想」がなければ、人の心は動かせないという信念を持つ。
+                                        「美しい映像」を作るのは当たり前。そこに「思想」がなければ、人の心は動かせない。
                                     </p>
                                     <p>
                                         2023年より生成AIの研究を開始。<br />
@@ -79,7 +79,7 @@ export default function AboutPage() {
                                         「AI × 人間の共創」をテーマに活動している。
                                     </p>
                                     <p className="text-navy-900 font-normal">
-                                        TOYX
+                                        TOYX @ NARUX
                                     </p>
                                 </div>
                             </FadeIn>
