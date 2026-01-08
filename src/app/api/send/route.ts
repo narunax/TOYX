@@ -1,7 +1,10 @@
 import { Resend } from "resend";
 import { NextRequest, NextResponse } from "next/server";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+export const dynamic = 'force-dynamic';
+
+// Initialize with a fallback to prevent build errors if env var is missing
+const resend = new Resend(process.env.RESEND_API_KEY || "re_123");
 
 export async function POST(req: NextRequest) {
     try {
