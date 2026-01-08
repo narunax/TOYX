@@ -1,6 +1,9 @@
 import WhySection from "@/components/sections/WhySection";
 import HowSection from "@/components/sections/HowSection";
 import WhatSection from "@/components/sections/WhatSection";
+import WorksHighlight from "@/components/sections/WorksHighlight";
+import ContactCTA from "@/components/sections/ContactCTA";
+import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
@@ -23,7 +26,7 @@ export default function Home() {
           <div className="mt-12 h-px w-32 bg-navy-100 animate-in fade-in zoom-in duration-1000" />
           <p className="mt-12 max-w-lg text-lg font-light text-slate-700 leading-relaxed animate-in fade-in slide-in-from-bottom-6 delay-500 duration-1000">
             問いかけることで、本質が見える。<br />
-            <span className="text-sm tracking-widest text-slate-400">VISION THROUGH QUESTIONING</span>
+            <span className="text-sm tracking-widest text-slate-400 uppercase">Vision Through Questioning</span>
           </p>
         </div>
 
@@ -32,10 +35,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Philosophy Sections */}
+      {/* Philosophy & Service Sections */}
       <WhySection />
       <HowSection />
       <WhatSection />
+
+      {/* Evidence & Conversion Sections */}
+      <WorksHighlight />
+      <ContactCTA />
+
+      <Footer />
     </main>
   );
 }
