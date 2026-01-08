@@ -78,9 +78,8 @@ export default function AboutPage() {
                                         クリエイティブの現場におけるAIの実践的な活用法を探求し、
                                         「AI × 人間の共創」をテーマに活動している。
                                     </p>
-                                    <p>
-                                        JUNESEP 代表。<br />
-                                        TOYX プロジェクト主宰。
+                                    <p className="text-navy-900 font-normal">
+                                        TOYX
                                     </p>
                                 </div>
                             </FadeIn>
