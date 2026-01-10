@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { getWorks } from "@/lib/data";
+import { LAYOUT_PX } from "@/lib/constants";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { Work } from "@/types";
 
@@ -18,8 +20,8 @@ export default function WorksPage() {
         : works.filter((w) => w.category === filter);
 
     return (
-        <main className="min-h-screen pt-32 pb-20 px-6">
-            <div className="mx-auto max-w-7xl">
+        <main className={`min-h-screen pt-32 pb-20 ${LAYOUT_PX}`}>
+            <div className="mx-auto max-w-screen-xl">
                 <FadeIn>
                     <h1 className="text-4xl md:text-6xl font-extralight text-navy-900 mb-8">Works</h1>
                 </FadeIn>
@@ -32,8 +34,8 @@ export default function WorksPage() {
                                 key={cat}
                                 onClick={() => setFilter(cat)}
                                 className={`px-4 py-2 rounded-full text-sm font-light transition-all duration-300 ${filter === cat
-                                        ? "bg-navy-900 text-white"
-                                        : "bg-slate-50 text-slate-500 hover:bg-slate-100"
+                                    ? "bg-navy-900 text-white"
+                                    : "bg-slate-50 text-slate-500 hover:bg-slate-100"
                                     }`}
                             >
                                 {cat}
@@ -55,12 +57,14 @@ export default function WorksPage() {
                                 transition={{ duration: 0.3 }}
                             >
                                 <Link href={`/works/${work.slug}`} className="group block">
-                                    <div className={`relative aspect-video overflow-hidden rounded-sm ${work.thumbnailUrl} mb-4`}>
+                                    <div className="relative aspect-video overflow-hidden rounded-sm mb-4 bg-navy-50">
+                                        <Image
+                                            src={work.thumbnailUrl}
+                                            alt={work.title}
+                                            fill
+                                            className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                        />
                                         <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-500" />
-                                        {/* Placeholder Icon */}
-                                        <div className="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-700">
-                                            <div className="w-16 h-16 border border-white rounded-full" />
-                                        </div>
                                     </div>
                                     <h3 className="text-lg font-light text-navy-900 group-hover:text-rose-500 transition-colors">
                                         {work.title}

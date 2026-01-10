@@ -6,6 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { Loader2, CheckCircle } from "lucide-react";
+import { LAYOUT_PX } from "@/lib/constants";
 
 // Validation Schema
 const contactSchema = z.object({
@@ -46,7 +47,7 @@ export default function ContactPage() {
     };
 
     return (
-        <main className="min-h-screen pt-32 pb-20 px-6">
+        <main className={`min-h-screen pt-32 pb-20 ${LAYOUT_PX}`}>
             <div className="mx-auto max-w-xl">
                 <FadeIn>
                     <div className="text-center mb-16">
@@ -65,7 +66,7 @@ export default function ContactPage() {
 
                 <FadeIn delay={0.2}>
                     {isSuccess ? (
-                        <div className="bg-green-50 border border-green-200 rounded-sm p-12 text-center animate-in fade-in zoom-in duration-500">
+                        <div className="bg-white/80 backdrop-blur-xl border border-white/40 shadow-xl rounded-sm p-12 text-center animate-in fade-in zoom-in duration-500">
                             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center text-green-500 mx-auto mb-6">
                                 <CheckCircle className="w-8 h-8" />
                             </div>
@@ -76,7 +77,8 @@ export default function ContactPage() {
                             </p>
                         </div>
                     ) : (
-                        <form onSubmit={handleSubmit(onSubmit)} className="space-y-8 bg-white p-8 md:p-12 shadow-sm border border-slate-100 rounded-sm">
+                        <form onSubmit={handleSubmit(onSubmit)} className="space-y-8 bg-white/70 backdrop-blur-xl p-8 md:p-12 shadow-xl border border-white/40 rounded-sm relative z-10">
+
 
                             <div className="space-y-2">
                                 <label htmlFor="name" className="text-xs font-light tracking-widest text-slate-400 uppercase">
@@ -85,7 +87,7 @@ export default function ContactPage() {
                                 <input
                                     id="name"
                                     {...register("name")}
-                                    className="w-full border-b border-slate-200 py-2 text-navy-900 focus:outline-none focus:border-navy-900 transition-colors bg-transparent placeholder:text-slate-300 font-light"
+                                    className="w-full border-b border-slate-200 py-2 text-navy-900 focus:outline-none focus:border-navy-900 transition-colors bg-white/50 focus:bg-white/80 placeholder:text-slate-300 font-light px-2"
                                     placeholder="Your Name"
                                 />
                                 {errors.name && <p className="text-rose-500 text-xs">{errors.name.message}</p>}
@@ -99,7 +101,7 @@ export default function ContactPage() {
                                     id="email"
                                     type="email"
                                     {...register("email")}
-                                    className="w-full border-b border-slate-200 py-2 text-navy-900 focus:outline-none focus:border-navy-900 transition-colors bg-transparent placeholder:text-slate-300 font-light"
+                                    className="w-full border-b border-slate-200 py-2 text-navy-900 focus:outline-none focus:border-navy-900 transition-colors bg-white/50 focus:bg-white/80 placeholder:text-slate-300 font-light px-2"
                                     placeholder="your.email@example.com"
                                 />
                                 {errors.email && <p className="text-rose-500 text-xs">{errors.email.message}</p>}
@@ -112,7 +114,7 @@ export default function ContactPage() {
                                 <input
                                     id="company"
                                     {...register("company")}
-                                    className="w-full border-b border-slate-200 py-2 text-navy-900 focus:outline-none focus:border-navy-900 transition-colors bg-transparent placeholder:text-slate-300 font-light"
+                                    className="w-full border-b border-slate-200 py-2 text-navy-900 focus:outline-none focus:border-navy-900 transition-colors bg-white/50 focus:bg-white/80 placeholder:text-slate-300 font-light px-2"
                                     placeholder="Company Name (Optional)"
                                 />
                             </div>
@@ -125,7 +127,7 @@ export default function ContactPage() {
                                     id="message"
                                     rows={5}
                                     {...register("message")}
-                                    className="w-full border border-slate-200 p-4 text-navy-900 focus:outline-none focus:border-navy-900 transition-colors bg-transparent placeholder:text-slate-300 font-light rounded-sm resize-none"
+                                    className="w-full border border-slate-200 p-4 text-navy-900 focus:outline-none focus:border-navy-900 transition-colors bg-white/50 focus:bg-white/80 placeholder:text-slate-300 font-light rounded-sm resize-none"
                                     placeholder="What is your question?"
                                 />
                                 {errors.message && <p className="text-rose-500 text-xs">{errors.message.message}</p>}

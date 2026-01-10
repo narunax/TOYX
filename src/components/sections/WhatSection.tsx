@@ -3,6 +3,7 @@
 import { FadeIn } from "@/components/animations/FadeIn";
 import { Video, Sparkles, Megaphone } from "lucide-react";
 import Link from "next/link";
+import { LAYOUT_PX } from "@/lib/constants";
 
 const services = [
     {
@@ -30,7 +31,7 @@ const services = [
 
 export default function WhatSection() {
     return (
-        <section className="py-48 px-6">
+        <section id="services" className={`py-32 ${LAYOUT_PX} bg-slate-50/50`}>
             <div className="mx-auto max-w-7xl">
                 <FadeIn>
                     <div className="mb-24 flex flex-col md:flex-row md:items-end justify-between">

@@ -7,7 +7,7 @@ const works = worksData as Work[];
 const services = servicesData as Service[];
 
 export function getWorks(): Work[] {
-    return works.sort((a, b) => new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime());
+    return [...works].sort((a, b) => new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime());
 }
 
 export function getWorkBySlug(slug: string): Work | undefined {

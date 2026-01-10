@@ -1,8 +1,10 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft } from "lucide-react";
 import { getWorkBySlug, getWorks } from "@/lib/data";
 import { FadeIn } from "@/components/animations/FadeIn";
+import { LAYOUT_PX } from "@/lib/constants";
 
 export function generateStaticParams() {
     const works = getWorks();
@@ -24,8 +26,8 @@ export default async function WorkDetailPage({
     }
 
     return (
-        <article className="min-h-screen pt-32 pb-20 px-6">
-            <div className="mx-auto max-w-5xl">
+        <article className={`min-h-screen pt-32 pb-20 ${LAYOUT_PX}`}>
+            <div className="mx-auto max-w-6xl">
                 <FadeIn>
                     <Link
                         href="/works"
@@ -51,10 +53,15 @@ export default async function WorkDetailPage({
 
                 {/* Hero Image / Video Placeholder */}
                 <FadeIn delay={0.4}>
-                    <div className={`aspect-video w-full rounded-sm ${work.thumbnailUrl} mb-20 relative overflow-hidden`}>
-                        <div className="absolute inset-0 flex items-center justify-center opacity-20">
-                            <div className="w-32 h-32 border border-navy-900 rounded-full animate-pulse" />
-                        </div>
+                    <div className="aspect-video w-full rounded-sm mb-20 relative overflow-hidden bg-navy-50">
+                        <Image
+                            src={work.thumbnailUrl}
+                            alt={work.title}
+                            fill
+                            className="object-cover"
+                            priority
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-navy-900/20 to-transparent" />
                     </div>
                 </FadeIn>
 

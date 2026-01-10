@@ -1,63 +1,55 @@
 [
     {
         "id": "1",
-        "title": "Project Genesis",
+        "title": "[PROJECT TITLE]",
         "slug": "project-genesis",
-        "category": "Corporate",
-        "thumbnailUrl": "bg-navy-100",
-        "client": "TechCorp Inc.",
-        "description": "次世代エネルギーシステムのローンチに向けた、ブランドビジョン映像。",
-        "challenge": "技術的な複雑さを、一般消費者にも直感的に伝わる「希望」として表現する必要があった。",
-        "solution": "3DCGと実写をシームレスに融合させ、エネルギーが循環する様子を「光の呼吸」として視覚化。",
-        "result": "展示会での来場者滞留時間が2倍に増加。投資家向けのプレゼンテーションでも高い評価を獲得。",
+        "category": "Director / VFX",
+        "thumbnailUrl": "/image/works/project_genesis.png",
+        "client": "[CLIENT NAME]",
+        "description": "ここにプロジェクトの概要が入ります。どのような目的で制作され、何を実現したかを簡潔に記述します。",
+        "challenge": "プロジェクトで直面した課題や、解決すべき問いについて記述します。",
+        "solution": "その課題に対して、どのようなアプローチや技術（AI・映像表現等）を用いて解決したかを記述します。",
+        "result": "プロジェクトの成果や、提供した価値について記述します。",
         "credits": [
             {
-                "role": "Director",
+                "role": "Creative AI Director",
                 "name": "Naruhito Inaba"
-            },
-            {
-                "role": "CG Artist",
-                "name": "Studio Zenith"
             }
         ],
         "publishedDate": "2025-10-15"
     },
     {
         "id": "2",
-        "title": "Urban Echoes",
+        "title": "[PROJECT TITLE]",
         "slug": "urban-echoes",
-        "category": "Event",
-        "thumbnailUrl": "bg-slate-100",
-        "client": "City Art Festival",
-        "description": "都市の騒音を音楽へと変換する、実験的なインスタレーションの記録映像。",
-        "challenge": "現場の「空気感」や「音の振動」を、画面越しにどう伝えるか。",
-        "solution": "バイノーラル録音と、音に反応して歪む映像エフェクトを同期させ、視聴者の感覚をジャックする。",
-        "result": "SNSでの再生回数が10万回を突破し、翌年のフェスティバル動員増に貢献。",
+        "category": "AI Strategy / Creative",
+        "thumbnailUrl": "/image/works/urban_echoes.png",
+        "client": "[CLIENT NAME]",
+        "description": "ここにプロジェクトの概要が入ります。どのような目的で制作され、何を実現したかを簡潔に記述します。",
+        "challenge": "プロジェクトで直面した課題や、解決すべき問いについて記述します。",
+        "solution": "その課題に対して、どのようなアプローチや技術（AI・映像表現等）を用いて解決したかを記述します。",
+        "result": "プロジェクトの成果や、提供した価値について記述します。",
         "credits": [
             {
-                "role": "Director / Editor",
+                "role": "Creative AI Director",
                 "name": "Naruhito Inaba"
-            },
-            {
-                "role": "Sound Design",
-                "name": "Echo Lab"
             }
         ],
         "publishedDate": "2025-08-20"
     },
     {
         "id": "3",
-        "title": "Digital Silence",
+        "title": "[PROJECT TITLE]",
         "slug": "digital-silence",
-        "category": "Art",
-        "thumbnailUrl": "bg-navy-50",
-        "description": "デジタル社会における「静寂」の意味を問う、自主制作ショートフィルム。",
-        "challenge": "セリフを一切使わずに、情報の氾濫とそこからの解放を描く。",
-        "solution": "極端なホワイトスペースと、ノイズから完全な無音（デジタルサイレンス）への急激なカット移行。",
-        "result": "XX映画祭 実験映像部門 入選。",
+        "category": "Concept / Visual",
+        "thumbnailUrl": "/image/works/digital_silence.png",
+        "description": "ここにプロジェクトの概要が入ります。どのような目的で制作され、何を実現したかを簡潔に記述します。",
+        "challenge": "プロジェクトで直面した課題や、解決すべき問いについて記述します。",
+        "solution": "その課題に対して、どのようなアプローチや技術（AI・映像表現等）を用いて解決したかを記述します。",
+        "result": "プロジェクトの成果や、提供した価値について記述します。",
         "credits": [
             {
-                "role": "Director",
+                "role": "Creative AI Director",
                 "name": "Naruhito Inaba"
             }
         ],
@@ -65,18 +57,18 @@
     },
     {
         "id": "4",
-        "title": "Future Pulse",
+        "title": "[PROJECT TITLE]",
         "slug": "future-pulse",
-        "category": "Brand",
-        "thumbnailUrl": "bg-slate-50",
-        "client": "Future Wear",
-        "description": "ウェアラブルデバイスの新製品プロモーション映像。",
-        "challenge": "機能説明になりがちなガジェット紹介を、ライフスタイルの一部として魅せる。",
-        "solution": "日常の何気ない動作とデバイスの機能をリンクさせ、テクノロジーが「自然」に見える演出。",
-        "result": "CTRが従来比150%を記録。",
+        "category": "Implementation",
+        "thumbnailUrl": "/image/works/future_pulse.png",
+        "client": "[CLIENT NAME]",
+        "description": "ここにプロジェクトの概要が入ります。どのような目的で制作され、何を実現したかを簡潔に記述します。",
+        "challenge": "プロジェクトで直面した課題や、解決すべき問いについて記述します。",
+        "solution": "その課題に対して、どのようなアプローチや技術（AI・映像表現等）を用いて解決したかを記述します。",
+        "result": "プロジェクトの成果や、提供した価値について記述します。",
         "credits": [
             {
-                "role": "Director",
+                "role": "Creative AI Director",
                 "name": "Naruhito Inaba"
             }
         ],

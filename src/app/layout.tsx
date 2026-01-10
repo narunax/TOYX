@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import GeometricLines from "@/components/effects/GeometricLines";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -19,8 +21,8 @@ export const metadata: Metadata = {
     default: "TOYX | 問いかけることで、本質が見える",
     template: "%s | TOYX",
   },
-  description: "映像クリエイター・稲葉成人のポートフォリオサイト。映像制作・AI導入支援・広報支援を通じて、本質的な問いを投げかけます。",
-  keywords: ["映像制作", "AI導入支援", "広報支援", "クリエイティブ"],
+  description: "Creative AI Director・稲葉成人のポートフォリオ。Concept Design、Visual Architecture、AI Product Designを統合し、消費ではなく「資産」となるプロジェクトを設計します。",
+  keywords: ["Concept Design", "Visual Architecture", "AI Product Design", "Branding", "Creative AI"],
   openGraph: {
     type: "website",
     locale: "ja_JP",
@@ -35,12 +37,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja" className={`${inter.variable} ${notoSansJP.variable}`}>
-      <body className="antialiased selection:bg-rose-100 selection:text-rose-900">
+    <html lang="ja" className={`${inter.variable} ${notoSansJP.variable}`} suppressHydrationWarning>
+      <body className="antialiased selection:bg-rose-100 selection:text-rose-900 min-h-screen relative caustic-bg">
+        <GeometricLines />
         <Header />
-        <div className="pt-16">
+        <div className="pt-16 relative z-10">
           {children}
         </div>
+        <Footer />
       </body>
     </html>
   );

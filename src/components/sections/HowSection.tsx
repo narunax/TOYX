@@ -1,6 +1,7 @@
 "use client";
 
 import { FadeIn } from "@/components/animations/FadeIn";
+import { LAYOUT_PX } from "@/lib/constants";
 import { Layers, Lightbulb, MessageSquare } from "lucide-react";
 
 const cards = [
@@ -23,7 +24,7 @@ const cards = [
 
 export default function HowSection() {
     return (
-        <section className="py-48 px-6 bg-navy-50/30">
+        <section className={`py-32 ${LAYOUT_PX} bg-white`}>
             <div className="mx-auto max-w-7xl">
                 <FadeIn>
                     <div className="mb-24 text-center md:text-left">

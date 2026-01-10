@@ -2,7 +2,8 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #102a43; /* navy-900 */
+  --foreground: #102a43;
+  /* navy-900 */
 
   /* TOYX Brand Colors */
   --color-navy-50: #f0f4f8;
@@ -42,7 +43,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  
+
   --color-navy-50: var(--color-navy-50);
   --color-navy-100: var(--color-navy-100);
   --color-navy-200: var(--color-navy-200);
@@ -82,24 +83,51 @@
 }
 
 @utility caustic-bg {
-  background: 
-    radial-gradient(circle at 20% 30%, rgba(203, 213, 225, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(36, 59, 83, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 50% 50%, rgba(235, 207, 218, 0.1) 0%, transparent 50%);
+  background:
+    radial-gradient(circle at 20% 30%, rgba(203, 213, 225, 0.12) 0%, transparent 60%),
+    radial-gradient(circle at 80% 70%, rgba(36, 59, 83, 0.05) 0%, transparent 60%),
+    radial-gradient(circle at 50% 50%, rgba(235, 207, 218, 0.08) 0%, transparent 60%);
+  background-attachment: fixed;
 }
 
-@utility geometric-lines {
-  background-image: 
-    linear-gradient(90deg, rgba(203, 213, 225, 0.2) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(203, 213, 225, 0.2) 1px, transparent 1px);
-  background-size: 80px 80px;
-}
 
 @utility glass-card {
-  background-color: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 10px 15px -3px rgba(16, 42, 67, 0.05);
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 30px -10px rgba(16, 42, 67, 0.05);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@utility animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes subtle-drift {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+@utility animate-subtle-drift {
+  animation: subtle-drift 60s linear infinite;
 }
 
 body {
@@ -109,7 +137,12 @@ body {
   font-weight: 300;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 300;
   letter-spacing: 0.05em;
 }
