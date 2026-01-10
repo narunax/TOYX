@@ -1,12 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { FadeIn } from "@/components/animations/FadeIn";
 import Image from "next/image";
 
 export const CareerOS = () => {
     // Animation variants for consistency
-    const lineVariant = {
+    const lineVariant: Variants = {
         hidden: { pathLength: 0, opacity: 0 },
         visible: {
             pathLength: 1,
@@ -15,7 +15,7 @@ export const CareerOS = () => {
         }
     };
 
-    const nodeVariant = {
+    const nodeVariant: Variants = {
         hidden: { scale: 0, opacity: 0 },
         visible: {
             scale: 1,
