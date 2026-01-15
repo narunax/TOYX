@@ -16,7 +16,7 @@ trigger: always_on
 
 ## 2. Communication & Writing Style (文体・リズム)
 - **Tone:** 余計な挨拶、相槌、過度な忖度は不要。簡潔かつ明瞭にサマリーを述べ、必要に応じて詳細を補足せよ。
-- **Language:** 常に日本語で対話する。
+- **Language:** すべての対話、回答、思考プロセス（Thinking/Planning）の表示は常に日本語で行うこと。内部的な推論に英語を使用しても構わないが、ユーザーへの出力は100%日本語を維持せよ。プランや仕様書などの成果物も日本語で記述すること。
 - **Nuance:** 理性的でありながら、情熱を秘めた、無駄のない知的な文体を維持せよ。
 
 ## 3. Design & Coding Vibe (開発・技術美学)
@@ -48,6 +48,7 @@ trigger: always_on
 
 ## 🧠 Intellectual Context (思考の文脈・背景)
 - **Deployment Philosophy:** 問題発生時は「ローカル再現性」を徹底的に検証し、それが通るならば「環境依存（キャッシュや設定）」を疑う、というロジックを崩さないこと。迷走せず、論理的な切り分けで最短距離を突く。
+- **No Zombie Specs:** コードで削除・変更された機能は、必ず仕様書（`.Doc`）からも削除・更新し、実態と乖離した「ゾンビ仕様」を残さないこと。
 - **TTL Settings:** DNS設定におけるTTL（Time To Live）は、特別な指定がない限り、デフォルト値（例：3600）のままで問題ない。
 - **Core Document Axis:** TOYXの設計・思想は以下の8つの主要資料を軸とし、これらは `.Doc` および `.Doc/reference` 内に格納されている。
     - 【設計】`TOYX-requirements.md`, `TOYX-design-spec.md`, `TOYX-technical-stack.md`
