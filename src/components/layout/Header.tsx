@@ -30,14 +30,20 @@ export default function Header() {
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <nav className="hidden space-x-8 md:flex">
-                        {["About", "Services", "Works", "Contact"].map((item) => (
+                    <nav className="hidden space-x-12 md:flex">
+                        {[
+                            { name: "Genesis", href: "/genesis" },
+                            { name: "Identity", href: "/identity" },
+                            { name: "Architecture", href: "/architecture" },
+                            { name: "Value", href: "/value" },
+                            { name: "Dialogue", href: "/dialogue" }
+                        ].map((item) => (
                             <Link
-                                key={item}
-                                href={`/${item.toLowerCase()}`}
-                                className="group relative text-sm font-light text-slate-600 transition-colors hover:text-navy-900"
+                                key={item.name}
+                                href={item.href}
+                                className="group relative text-sm font-light tracking-widest text-slate-600 transition-colors hover:text-navy-900"
                             >
-                                {item}
+                                {item.name}
                                 <span className="absolute -bottom-1 left-0 h-px w-0 bg-rose-400 transition-all group-hover:w-full" />
                             </Link>
                         ))}
@@ -81,22 +87,28 @@ export default function Header() {
                             <div className="absolute top-[60%] -left-[10%] w-[400px] h-[400px] bg-navy-500/10 rounded-full blur-[80px]" />
                         </div>
 
-                        <nav className="relative z-10 flex flex-col items-center space-y-8">
-                            {["About", "Services", "Works", "Contact"].map((item, i) => (
+                        <nav className="relative z-10 flex flex-col items-center space-y-10">
+                            {[
+                                { name: "Genesis", href: "/genesis" },
+                                { name: "Identity", href: "/identity" },
+                                { name: "Architecture", href: "/architecture" },
+                                { name: "Value", href: "/value" },
+                                { name: "Dialogue", href: "/dialogue" }
+                            ].map((item, i) => (
                                 <motion.div
-                                    key={item}
+                                    key={item.name}
                                     initial={{ y: 20, opacity: 0 }}
                                     animate={{ y: 0, opacity: 1 }}
                                     exit={{ y: 10, opacity: 0 }}
                                     transition={{ delay: 0.1 + i * 0.1, duration: 0.5, ease: "easeOut" }}
-                                    onClick={(e) => e.stopPropagation()} // リンク周辺クリック時のバブリング防止はしないが、リンク自体は伝播する
+                                    onClick={(e) => e.stopPropagation()}
                                 >
                                     <Link
-                                        href={`/${item.toLowerCase()}`}
-                                        className="text-4xl font-thin tracking-[0.2em] text-white hover:text-rose-200 transition-colors duration-300"
+                                        href={item.href}
+                                        className="text-4xl font-thin tracking-[0.25em] text-white hover:text-rose-200 transition-colors duration-300"
                                         onClick={() => setIsOpen(false)}
                                     >
-                                        {item}
+                                        {item.name}
                                     </Link>
                                 </motion.div>
                             ))}

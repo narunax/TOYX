@@ -43,7 +43,7 @@ export default function AxesSection() {
                         <span className="text-[10px] font-light tracking-[0.4em] text-rose-500 uppercase mb-4 block opacity-80">
                             The 3 Axes
                         </span>
-                        <h2 className="text-4xl md:text-5xl font-extralight text-navy-900 tracking-tight">
+                        <h2 className="text-4xl md:text-5xl font-extralight text-navy-900 tracking-tight font-serif">
                             活動を支える、三つの領域
                         </h2>
                     </div>
@@ -52,13 +52,13 @@ export default function AxesSection() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {axes.map((axis, i) => (
                         <FadeIn key={axis.id} delay={i * 0.2}>
-                            <div className={`h-full p-10 rounded-2xl border border-navy-100/50 backdrop-blur-sm ${axis.color} group hover:shadow-2xl hover:shadow-navy-900/5 transition-all duration-700`}>
-                                <div className="p-3 bg-white w-fit rounded-lg shadow-sm border border-navy-50 mb-8 group-hover:scale-110 transition-transform duration-500">
+                            <div className={`h-full p-10 rounded-none border border-navy-100/50 backdrop-blur-sm ${axis.color} group hover:shadow-2xl hover:shadow-navy-900/5 transition-all duration-700`}>
+                                <div className="p-3 bg-white w-fit rounded-none shadow-sm border border-navy-50 mb-8 group-hover:scale-110 transition-transform duration-500">
                                     {axis.icon}
                                 </div>
                                 <div className="space-y-4">
                                     <div>
-                                        <h3 className="text-2xl font-light text-navy-900 tracking-widest">
+                                        <h3 className="text-2xl font-light text-navy-900 tracking-widest font-serif">
                                             {axis.label}
                                         </h3>
                                         <p className="text-[10px] tracking-[0.2em] text-rose-400 uppercase mt-2 font-medium">
@@ -76,12 +76,28 @@ export default function AxesSection() {
                 </div>
 
                 <FadeIn delay={0.6}>
-                    <p className="mt-20 text-center text-sm font-light text-slate-400 italic tracking-[0.1em]">
-                        これらの領域は独立しているのではなく、互いにリソースと知見を循環させ、<br className="hidden md:block" />
-                        「TOYX」という一つの生態系を形作ります。
-                    </p>
+                    <div className="mt-20 flex flex-col items-center">
+                        <p className="text-center text-sm font-light text-slate-400 italic tracking-[0.1em] mb-12">
+                            これらの領域は独立しているのではなく、互いにリソースと知見を循環させ、<br className="hidden md:block" />
+                            「TOYX」という一つの生態系を形作ります。
+                        </p>
+                        <Link href="/identity" className="group inline-flex items-center gap-6">
+                            <span className="text-xs tracking-[0.4em] uppercase font-light text-navy-400 group-hover:text-rose-500 transition-colors duration-500">View Identity Deep Dive</span>
+                            <div className="w-12 h-px bg-navy-100 group-hover:w-24 group-hover:bg-rose-300 transition-all duration-700" />
+                        </Link>
+                    </div>
+                </FadeIn>
+                <FadeIn delay={0.6}>
+                    <div className="mt-24 text-center">
+                        <Link href="/architecture" className="group inline-flex items-center gap-6">
+                            <span className="text-xs tracking-[0.4em] uppercase font-light text-navy-400 group-hover:text-rose-500 transition-colors duration-500">Explore the Architecture</span>
+                            <div className="w-12 h-px bg-navy-100 group-hover:w-24 group-hover:bg-rose-300 transition-all duration-700" />
+                        </Link>
+                    </div>
                 </FadeIn>
             </div>
         </section>
     );
 }
+
+import Link from "next/link";

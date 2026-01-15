@@ -43,4 +43,7 @@ trigger: always_on
 
 ## 🧠 Intellectual Context (思考の文脈・背景)
 - **Deployment Philosophy:** 問題発生時は「ローカル再現性」を徹底的に検証し、それが通るならば「環境依存（キャッシュや設定）」を疑う、というロジックを崩さないこと。迷走せず、論理的な切り分けで最短距離を突く。
+- **Core Document Axis:** TOYXの設計・思想は以下の8つの主要資料を軸とし、これらは `.Doc` および `.Doc/reference` 内に格納されている。
+    - 【設計】`TOYX-requirements.md`, `TOYX-design-spec.md`, `TOYX-technical-stack.md`
+    - 【思想】`TOYX-Philosophy.md`, `TOYX-Concept.md`, `TOYX-BusinessValueMap.md`, `TOYX-Role_Architecture.md`, `TOYX-CareerOS.md`
 - (ここにAIが自動追記する：例：現在はSNS運用サポート事業に注力している、等)

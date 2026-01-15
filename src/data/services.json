@@ -43,8 +43,8 @@
     },
     {
         "id": "ai-partner",
-        "title": "AI Transformation Partner",
-        "jpTitle": "AI活用・定着支援",
+        "title": "Creative AI Partner",
+        "jpTitle": "中小企業AI支援パートナー",
         "iconName": "RotateCw",
         "description": "中小企業の経営者・現場に寄り添い、AIを文化として定着させます。技術論に終始せず、経営資源の最適化という視点から、自走可能な組織状態への変容をサポートします。",
         "features": [

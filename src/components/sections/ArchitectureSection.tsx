@@ -9,7 +9,7 @@ const layers = [
         role: "Concept Creator",
         level: "WHY",
         title: "意味を定義し、迷いを終わらせる",
-        desc: "「何を問うべきか」を定め、プロジェクトの存在理由を言語化する。ここが定まることで、後工程のすべてのリソースが「消費」から「資産」へと変わります。",
+        desc: "「何を問うべきか」を定め、プロジェクトの存在理由を言語化する。ここが定まることで、後工程のすべてのリソースは単なる「消費」ではなく、積み上がる「資産」としての質を帯び始める。",
         icon: <Search className="w-5 h-5" />,
         highlight: false // Flat design
     },
@@ -17,7 +17,7 @@ const layers = [
         role: "Visual Creator",
         level: "HOW",
         title: "見えない価値を、可視化する",
-        desc: "言語化できない想いや概念を、映像・UI・デザインの力で直感的に伝わる「体験」へと翻訳します。論理を超えて、人の心を動かすための設計図。",
+        desc: "言語化できない想いや概念を、映像・UI・デザインの力で直感的に伝わる「体験」へと翻訳。論理を超えて、人の心を動かすための設計図。",
         icon: <Eye className="w-5 h-5" />,
         highlight: false
     },
@@ -25,7 +25,7 @@ const layers = [
         role: "AI Product Designer",
         level: "WHAT",
         title: "「概念」を「実装」する",
-        desc: "固定化された成果物ではなく、現場で動き続けるプロトタイプやシステムを構築。AIを手段として使いこなし、絵に描いた餅で終わらせない「実効性」をつくります。",
+        desc: "固定化された成果物ではなく、現場で動き続けるプロトタイプやシステムを構築。AIを手段として使いこなし、絵に描いた餅で終わらせない「実効性」を確立する。",
         icon: <Cpu className="w-5 h-5" />,
         highlight: false
     }
@@ -38,13 +38,13 @@ export default function ArchitectureSection() {
                 <FadeIn>
                     <div className="mb-24 text-center">
                         <span className="text-[10px] font-light tracking-[0.4em] text-rose-500 uppercase mb-4 block opacity-80">
-                            Role Architecture
+                            Architecture of Thought
                         </span>
-                        <h2 className="text-4xl md:text-5xl font-extralight text-navy-900 tracking-tight">
+                        <h2 className="text-4xl md:text-5xl font-extralight text-navy-900 tracking-tight font-serif">
                             意味・統合・実装の連環
                         </h2>
                         <p className="mt-8 text-slate-400 font-light text-sm tracking-widest max-w-xl mx-auto leading-relaxed">
-                            「なぜ作るのか」から「どう定着させるか」までを一人で往復することで、<br />
+                            「なぜ作るのか」から「どう定着させるか」までを私ひとりで往復することで、<br />
                             情報の分断を防ぎ、最速で本質的な成果へと導きます。
                         </p>
                     </div>
@@ -62,10 +62,10 @@ export default function ArchitectureSection() {
 
                                     <div className="flex-grow">
                                         <div className="flex flex-col md:flex-row md:items-baseline gap-4 mb-4">
-                                            <h3 className="text-2xl font-light tracking-widest">
+                                            <h3 className="text-2xl font-light tracking-widest font-serif">
                                                 {layer.role}
                                             </h3>
-                                            <span className={`text-[10px] tracking-widest font-light opacity-60`}>
+                                            <span className={`text-[10px] tracking-widest font-light opacity-60 font-serif`}>
                                                 — {layer.title}
                                             </span>
                                         </div>
@@ -85,7 +85,17 @@ export default function ArchitectureSection() {
                         </FadeIn>
                     ))}
                 </div>
+                <FadeIn delay={0.6}>
+                    <div className="mt-20 text-center">
+                        <Link href="/architecture" className="group inline-flex items-center gap-6">
+                            <span className="text-xs tracking-[0.4em] uppercase font-light text-navy-400 group-hover:text-rose-500 transition-colors duration-500">Explore the Architecture</span>
+                            <div className="w-12 h-px bg-navy-100 group-hover:w-24 group-hover:bg-rose-300 transition-all duration-700" />
+                        </Link>
+                    </div>
+                </FadeIn>
             </div>
         </section>
     );
 }
+
+import Link from "next/link";

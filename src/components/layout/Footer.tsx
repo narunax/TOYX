@@ -30,9 +30,15 @@ export default function Footer() {
                         <div className="space-y-4">
                             <span className="text-xs font-light tracking-widest text-navy-900 uppercase block mb-6">Menu</span>
                             <nav className="flex flex-col gap-3">
-                                {["About", "Services", "Works", "Contact"].map((item) => (
-                                    <Link key={item} href={`/${item.toLowerCase()}`} className="text-sm font-light text-slate-400 hover:text-navy-900 transition-colors">
-                                        {item}
+                                {[
+                                    { name: "Genesis", href: "/genesis" },
+                                    { name: "Identity", href: "/identity" },
+                                    { name: "Architecture", href: "/architecture" },
+                                    { name: "Value", href: "/value" },
+                                    { name: "Dialogue", href: "/dialogue" }
+                                ].map((item) => (
+                                    <Link key={item.name} href={item.href} className="text-sm font-light text-slate-400 hover:text-navy-900 transition-colors">
+                                        {item.name}
                                     </Link>
                                 ))}
                             </nav>
