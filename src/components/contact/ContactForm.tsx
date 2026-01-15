@@ -6,11 +6,32 @@ import { motion } from "framer-motion";
 export default function ContactForm() {
     const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
-    const handleSubmit = async (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setStatus("submitting");
-        // Simulate submission
-        setTimeout(() => setStatus("success"), 1500);
+
+        const formData = new FormData(e.currentTarget);
+        const data = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            message: formData.get('message'),
+        };
+
+        try {
+            const response = await fetch('/api/send', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+                setStatus("success");
+            } else {
+                setStatus("error");
+            }
+        } catch (error) {
+            setStatus("error");
+        }
     };
 
     if (status === "success") {
@@ -41,6 +62,7 @@ export default function ContactForm() {
                 <input
                     type="text"
                     id="name"
+                    name="name"
                     required
                     className="w-full bg-transparent border-b border-navy-100 py-3 focus:outline-none focus:border-rose-300 transition-colors text-navy-900 font-light placeholder:text-navy-100 placeholder:italic"
                     placeholder="Name"
@@ -52,6 +74,7 @@ export default function ContactForm() {
                 <input
                     type="email"
                     id="email"
+                    name="email"
                     required
                     className="w-full bg-transparent border-b border-navy-100 py-3 focus:outline-none focus:border-rose-300 transition-colors text-navy-900 font-light placeholder:text-navy-100 placeholder:italic"
                     placeholder="example@domain.com"
@@ -62,12 +85,19 @@ export default function ContactForm() {
                 <label htmlFor="message" className="text-xs font-sans tracking-[0.2em] uppercase text-slate-400">Message / Inquiry</label>
                 <textarea
                     id="message"
+                    name="message"
                     required
                     rows={4}
                     className="w-full bg-transparent border-b border-navy-100 py-3 focus:outline-none focus:border-rose-300 transition-colors text-navy-900 font-light placeholder:text-navy-100 placeholder:italic resize-none"
                     placeholder="Message"
                 />
             </div>
+
+            {status === "error" && (
+                <p className="text-xs text-rose-500 italic">
+                    送信に失敗しました。時間をおいて再度お試しください。
+                </p>
+            )}
 
             <button
                 type="submit"
@@ -80,5 +110,6 @@ export default function ContactForm() {
                 {status === "submitting" ? "Sending..." : "Send Message"}
             </button>
         </form>
+
     );
 }

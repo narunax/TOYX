@@ -33,16 +33,22 @@ trigger: always_on
 - **Logical Motion:** アニメーションの動きには意味を持たせる（例：創造のプロセスは「起点→表現→実装」へと流れる反時計回り、など）。
 - **Structural Core:** 中核となる要素（Core/Axis）は、有機的な世界の中で「構造物（Diamond/Structure）」として確立させ、揺るぎない軸を示す。
 - **Sharp & Lucid (鋭さと透明感):** 角丸（Rounded Corners）を排し、四角形や直線を主体とした「鋭さ」を追求する。背景は不透明な塗りつぶしではなく、半透明のネイビー（`bg-navy-50/xx`）と `backdrop-blur` を駆使し、奥にある「構造（Grid/Lines）」を透かして見せることで、世界の奥行きと繋がりを表現する。
-- **Schema over Graphic:** ビジュアルは「装飾的な図」ではなく「構造的な設計図（Architectural Diagram）」を目指す。LP的な派手さよりも、システムの美しさを優先せよ。
+- **Schema over Graphic:** ビジュアルは「装飾的な図」ではなく「構造的な設計図（Architectural Diagram）」を目指す。LP的な派手さよりも、システムの美しさは「図（Diagram）」としての完成度に宿る。
+- **Absolute Synchronization:** アニメーションの同期は、ミリ秒単位の狂いも許さない。ブラウザレベルでの最適化を優先し、SVGネイティブのSMIL（animateMotion/animate）とFramer Motionを組み合わせ、公転運動とエフェクトの完璧な連動を追求する。
 
 ## ✍️ Expression & Vocabulary (好みの表現・語彙)
 - **Concept Naming:** "Career OS" ではなく "**Creative OS**" と呼称する。
-- **Localization Strategy (Strict):**
-    - "Partner" は "**中小企業AI支援パートナー**" と定義する（"活用" ではなく "**支援**"）。
-    - "Management" は英語化せず "**経営**" （Creative × AI × 経営）と表記する。
+- **Localization & Tone Strategy (Anti-Sales):**
+    - **非・情緒的訴求:** 広告的な「訴求」「売り込み」「変化の約束（〜なります、実現します）」を徹底的に排除する。代わりに、構造的な必然性や現象の記述（例：「〜として沈殿する」「〜を定義する」「〜としての質を帯びる」）を用いる。
+    - **Job Naming:** 役割の定義において「支援」「パートナー」といった情緒的・サービス的な言葉を排し、「中小企業 × AI 実装」のように、構造と事実を直接指し示す表現を用いる。
+- **Preferred Vocabulary:**
+    - 「ダイブ」のような躍動的な言葉を避け、「**沈潜（ちんせん）**」のような内省的・思索的な語彙を選択する。
+    - 音楽的な「リピート（𝄇）」などの記号を用い、言葉に「反復」や「円環」のニュアンスを非言語的に持たせる。
+- **Language Policy:** "Management" は英語化せず "**経営**" （Creative × AI × 経営）と表記する。
 
 ## 🧠 Intellectual Context (思考の文脈・背景)
 - **Deployment Philosophy:** 問題発生時は「ローカル再現性」を徹底的に検証し、それが通るならば「環境依存（キャッシュや設定）」を疑う、というロジックを崩さないこと。迷走せず、論理的な切り分けで最短距離を突く。
+- **TTL Settings:** DNS設定におけるTTL（Time To Live）は、特別な指定がない限り、デフォルト値（例：3600）のままで問題ない。
 - **Core Document Axis:** TOYXの設計・思想は以下の8つの主要資料を軸とし、これらは `.Doc` および `.Doc/reference` 内に格納されている。
     - 【設計】`TOYX-requirements.md`, `TOYX-design-spec.md`, `TOYX-technical-stack.md`
     - 【思想】`TOYX-Philosophy.md`, `TOYX-Concept.md`, `TOYX-BusinessValueMap.md`, `TOYX-Role_Architecture.md`, `TOYX-CareerOS.md`
